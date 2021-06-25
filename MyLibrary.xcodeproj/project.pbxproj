@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		D4C411D02685FFD9003CA864 /* UniversalLib */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D4C411D12685FFD9003CA864 /* Build configuration list for PBXAggregateTarget "UniversalLib" */;
+			buildPhases = (
+				D4C411D42686009B003CA864 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalLib;
+			productName = UniversalLib;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		D4C411312684C2FC003CA864 /* MyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C411302684C2FC003CA864 /* MyLibrary.swift */; };
+		D4C411442684C460003CA864 /* CardIO.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C411382684C460003CA864 /* CardIO.m */; };
+		D4C411452684C461003CA864 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C4113B2684C460003CA864 /* libopencv_core.a */; };
+		D4C411462684C461003CA864 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C4113E2684C460003CA864 /* libCardIO.a */; };
+		D4C411472684C461003CA864 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C4113F2684C460003CA864 /* libopencv_imgproc.a */; };
+		D4C4116F2684F356003CA864 /* CardIO.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C411422684C460003CA864 /* CardIO.h */; };
+		D4C411702684F356003CA864 /* CardIOCreditCardInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C411402684C460003CA864 /* CardIOCreditCardInfo.h */; };
+		D4C411712684F356003CA864 /* CardIODetectionMode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C4113D2684C460003CA864 /* CardIODetectionMode.h */; };
+		D4C411722684F356003CA864 /* CardIOPaymentViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C411412684C460003CA864 /* CardIOPaymentViewController.h */; };
+		D4C411732684F356003CA864 /* CardIOPaymentViewControllerDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C411432684C460003CA864 /* CardIOPaymentViewControllerDelegate.h */; };
+		D4C411742684F356003CA864 /* CardIOUtilities.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C4113A2684C460003CA864 /* CardIOUtilities.h */; };
+		D4C411752684F356003CA864 /* CardIOView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C4113C2684C460003CA864 /* CardIOView.h */; };
+		D4C411762684F356003CA864 /* CardIOViewDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D4C411392684C460003CA864 /* CardIOViewDelegate.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4C4112B2684C2FC003CA864 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				D4C4116F2684F356003CA864 /* CardIO.h in CopyFiles */,
+				D4C411702684F356003CA864 /* CardIOCreditCardInfo.h in CopyFiles */,
+				D4C411712684F356003CA864 /* CardIODetectionMode.h in CopyFiles */,
+				D4C411722684F356003CA864 /* CardIOPaymentViewController.h in CopyFiles */,
+				D4C411732684F356003CA864 /* CardIOPaymentViewControllerDelegate.h in CopyFiles */,
+				D4C411742684F356003CA864 /* CardIOUtilities.h in CopyFiles */,
+				D4C411752684F356003CA864 /* CardIOView.h in CopyFiles */,
+				D4C411762684F356003CA864 /* CardIOViewDelegate.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D4C4112D2684C2FC003CA864 /* libMyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C411302684C2FC003CA864 /* MyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibrary.swift; sourceTree = "<group>"; };
+		D4C411372684C45F003CA864 /* MyLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4C411382684C460003CA864 /* CardIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIO.m; sourceTree = "<group>"; };
+		D4C411392684C460003CA864 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
+		D4C4113A2684C460003CA864 /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
+		D4C4113B2684C460003CA864 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_core.a; sourceTree = "<group>"; };
+		D4C4113C2684C460003CA864 /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
+		D4C4113D2684C460003CA864 /* CardIODetectionMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIODetectionMode.h; sourceTree = "<group>"; };
+		D4C4113E2684C460003CA864 /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
+		D4C4113F2684C460003CA864 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencv_imgproc.a; sourceTree = "<group>"; };
+		D4C411402684C460003CA864 /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		D4C411412684C460003CA864 /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		D4C411422684C460003CA864 /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		D4C411432684C460003CA864 /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4C4112A2684C2FC003CA864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C411452684C461003CA864 /* libopencv_core.a in Frameworks */,
+				D4C411462684C461003CA864 /* libCardIO.a in Frameworks */,
+				D4C411472684C461003CA864 /* libopencv_imgproc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4C411242684C2FC003CA864 = {
+			isa = PBXGroup;
+			children = (
+				D4C4112F2684C2FC003CA864 /* MyLibrary */,
+				D4C4112E2684C2FC003CA864 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4C4112E2684C2FC003CA864 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4C4112D2684C2FC003CA864 /* libMyLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4C4112F2684C2FC003CA864 /* MyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				D4C411422684C460003CA864 /* CardIO.h */,
+				D4C411382684C460003CA864 /* CardIO.m */,
+				D4C411402684C460003CA864 /* CardIOCreditCardInfo.h */,
+				D4C4113D2684C460003CA864 /* CardIODetectionMode.h */,
+				D4C411412684C460003CA864 /* CardIOPaymentViewController.h */,
+				D4C411432684C460003CA864 /* CardIOPaymentViewControllerDelegate.h */,
+				D4C4113A2684C460003CA864 /* CardIOUtilities.h */,
+				D4C4113C2684C460003CA864 /* CardIOView.h */,
+				D4C411392684C460003CA864 /* CardIOViewDelegate.h */,
+				D4C4113E2684C460003CA864 /* libCardIO.a */,
+				D4C4113B2684C460003CA864 /* libopencv_core.a */,
+				D4C4113F2684C460003CA864 /* libopencv_imgproc.a */,
+				D4C411302684C2FC003CA864 /* MyLibrary.swift */,
+				D4C411372684C45F003CA864 /* MyLibrary-Bridging-Header.h */,
+			);
+			path = MyLibrary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4C4112C2684C2FC003CA864 /* MyLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C411342684C2FC003CA864 /* Build configuration list for PBXNativeTarget "MyLibrary" */;
+			buildPhases = (
+				D4C411292684C2FC003CA864 /* Sources */,
+				D4C4112A2684C2FC003CA864 /* Frameworks */,
+				D4C4112B2684C2FC003CA864 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyLibrary;
+			productName = MyLibrary;
+			productReference = D4C4112D2684C2FC003CA864 /* libMyLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4C411252684C2FC003CA864 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					D4C4112C2684C2FC003CA864 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+					D4C411D02685FFD9003CA864 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = D4C411282684C2FC003CA864 /* Build configuration list for PBXProject "MyLibrary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4C411242684C2FC003CA864;
+			productRefGroup = D4C4112E2684C2FC003CA864 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4C4112C2684C2FC003CA864 /* MyLibrary */,
+				D4C411D02685FFD9003CA864 /* UniversalLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4C411D42686009B003CA864 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n# Created by: Rostyslav Druzhchenko\n#\n\n# 1: Declare variables\nRESULT_DIR=\"libUniversal\"\n\nBUILD_DIR_SIMULATOR=\"Debug-iphonesimulator\"\nBUILD_DIR_DEVICE=\"Debug-iphoneos\"\n\nLIB_NAME=\"MyLibrary\"\nLIB_BINARY_NAME=\"lib$LIB_NAME.a\"\nLIB_BINARY_NAME_SIMULATOR=\"lib$LIB_NAME-simulator.a\"\nLIB_BINARY_NAME_DEVICE=\"lib$LIB_NAME-device.a\"\n\nSWIFTMODULE_DIR=$LIB_NAME\".swiftmodule\"\n\n# 2: BUILD\n#\n# Build for simulator\nxcodebuild -target $LIB_NAME -configuration ${CONFIGURATION} -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# Build for device\nxcodebuild -target $LIB_NAME ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# 3: OPERATE THE BINARIES\n#\n# Move to the build directory\ncd $BUILD_DIR\n\n# Completely delete the result of the previous build if any\n# Suppress the error to avoid unnecessary logs\nrm -rf $BUILD_DIR/$RESULT_DIR 2> /dev/null\n\n# Create a new result directory\nmkdir $RESULT_DIR\n\n# Copy simulator's binary file to the result dir and rename it\ncp ./$BUILD_DIR_SIMULATOR/$LIB_BINARY_NAME ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR\n\n# Copy devices's binary file to the result dir and rename it\ncp ./$BUILD_DIR_DEVICE/$LIB_BINARY_NAME ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE\n\n# Make the library \"fat\", means \"universal\"\nlipo -create ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE -output ./$RESULT_DIR/$LIB_BINARY_NAME\n\n# Delete simulator's binary file\nrm ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR\n\n# Delete device's binary file\nrm ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE\n\n# 4: OPERATE SIWFTMODULE\n#\n# Create \".siwftmodule\" directory in the result directory\nmkdir $RESULT_DIR/$SWIFTMODULE_DIR\n\n# Copy 'swiftmodule' related to simulator\ncp -r $BUILD_DIR_SIMULATOR/$SWIFTMODULE_DIR $RESULT_DIR\n\n# Copy 'swiftmodule' related to mobile divice\ncp -r $BUILD_DIR_DEVICE/$SWIFTMODULE_DIR/* $RESULT_DIR/$SWIFTMODULE_DIR\n\n# Delete build directory\nrm -rf $PROJECT_DIR/build\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4C411292684C2FC003CA864 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C411312684C2FC003CA864 /* MyLibrary.swift in Sources */,
+				D4C411442684C460003CA864 /* CardIO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D4C411322684C2FC003CA864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4C411332684C2FC003CA864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4C411352684C2FC003CA864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyLibrary",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyLibrary/MyLibrary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4C411362684C2FC003CA864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyLibrary",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MyLibrary/MyLibrary-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4C411D22685FFD9003CA864 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4C411D32685FFD9003CA864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4C411282684C2FC003CA864 /* Build configuration list for PBXProject "MyLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C411322684C2FC003CA864 /* Debug */,
+				D4C411332684C2FC003CA864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C411342684C2FC003CA864 /* Build configuration list for PBXNativeTarget "MyLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C411352684C2FC003CA864 /* Debug */,
+				D4C411362684C2FC003CA864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C411D12685FFD9003CA864 /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C411D22685FFD9003CA864 /* Debug */,
+				D4C411D32685FFD9003CA864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4C411252684C2FC003CA864 /* Project object */;
+}
