@@ -8,7 +8,12 @@ let package = Package(
     targets: [
         .target(name: "MyLibrary",
                 path: "MyLibrary",
-                publicHeadersPath: "MyLibrary")
+                publicHeadersPath: "MyLibrary",
+                linkerSettings: [
+                    .linkedLibrary("libCardIO.a"),
+                    .linkedLibrary("libopencv_core.a"),
+                    .linkedLibrary("libopencv_imgproc.a"),
+                ])
             
     ]
 )
