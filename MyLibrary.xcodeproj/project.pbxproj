@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		D4C411312684C2FC003CA864 /* MyLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C411302684C2FC003CA864 /* MyLibrary.swift */; };
 		D4C411442684C460003CA864 /* CardIO.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C411382684C460003CA864 /* CardIO.m */; };
 		D4C411452684C461003CA864 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C4113B2684C460003CA864 /* libopencv_core.a */; };
 		D4C411462684C461003CA864 /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C4113E2684C460003CA864 /* libCardIO.a */; };
@@ -58,7 +57,6 @@
 
 /* Begin PBXFileReference section */
 		D4C4112D2684C2FC003CA864 /* libMyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4C411302684C2FC003CA864 /* MyLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibrary.swift; sourceTree = "<group>"; };
 		D4C411372684C45F003CA864 /* MyLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4C411382684C460003CA864 /* CardIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIO.m; sourceTree = "<group>"; };
 		D4C411392684C460003CA864 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				D4C4113E2684C460003CA864 /* libCardIO.a */,
 				D4C4113B2684C460003CA864 /* libopencv_core.a */,
 				D4C4113F2684C460003CA864 /* libopencv_imgproc.a */,
-				D4C411302684C2FC003CA864 /* MyLibrary.swift */,
 				D4C411372684C45F003CA864 /* MyLibrary-Bridging-Header.h */,
 			);
 			path = MyLibrary;
@@ -207,7 +204,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C411312684C2FC003CA864 /* MyLibrary.swift in Sources */,
 				D4C411442684C460003CA864 /* CardIO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

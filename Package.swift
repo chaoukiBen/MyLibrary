@@ -6,6 +6,9 @@ let package = Package(
         .library(name: "MyLibrary", targets: ["MyLibrary"])
     ],
     targets: [
-        .target(name: "MyLibrary", path: "MyLibrary")
+        .target(name: "MyLibrary",
+                path: "MyLibrary",
+                publicHeadersPath: "MyLibrary")
+            
     ]
 )
