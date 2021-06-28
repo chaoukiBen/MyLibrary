@@ -56,7 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D4C4112D2684C2FC003CA864 /* libCardIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCardIO.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C4112D2684C2FC003CA864 /* libMyLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C411372684C45F003CA864 /* MyLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4C411382684C460003CA864 /* CardIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardIO.m; sourceTree = "<group>"; };
 		D4C411392684C460003CA864 /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
 		D4C4113A2684C460003CA864 /* CardIOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOUtilities.h; sourceTree = "<group>"; };
@@ -96,7 +97,7 @@
 		D4C4112E2684C2FC003CA864 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4C4112D2684C2FC003CA864 /* libCardIO.a */,
+				D4C4112D2684C2FC003CA864 /* libMyLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +117,7 @@
 				D4C4113E2684C460003CA864 /* libCardIO.a */,
 				D4C4113B2684C460003CA864 /* libopencv_core.a */,
 				D4C4113F2684C460003CA864 /* libopencv_imgproc.a */,
+				D4C411372684C45F003CA864 /* MyLibrary-Bridging-Header.h */,
 			);
 			path = MyLibrary;
 			sourceTree = "<group>";
@@ -123,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D4C4112C2684C2FC003CA864 /* CardIO */ = {
+		D4C4112C2684C2FC003CA864 /* MyLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C411342684C2FC003CA864 /* Build configuration list for PBXNativeTarget "CardIO" */;
+			buildConfigurationList = D4C411342684C2FC003CA864 /* Build configuration list for PBXNativeTarget "MyLibrary" */;
 			buildPhases = (
 				D4C411292684C2FC003CA864 /* Sources */,
 				D4C4112A2684C2FC003CA864 /* Frameworks */,
@@ -135,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = CardIO;
+			name = MyLibrary;
 			productName = MyLibrary;
-			productReference = D4C4112D2684C2FC003CA864 /* libCardIO.a */;
+			productReference = D4C4112D2684C2FC003CA864 /* libMyLibrary.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -158,7 +160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D4C411282684C2FC003CA864 /* Build configuration list for PBXProject "CardIO" */;
+			buildConfigurationList = D4C411282684C2FC003CA864 /* Build configuration list for PBXProject "MyLibrary" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -171,7 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4C4112C2684C2FC003CA864 /* CardIO */,
+				D4C4112C2684C2FC003CA864 /* MyLibrary */,
 				D4C411D02685FFD9003CA864 /* UniversalLib */,
 			);
 		};
@@ -193,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n# Created by: Rostyslav Druzhchenko\n#\n\n# 1: Declare variables\nRESULT_DIR=\"libUniversal\"\n\nBUILD_DIR_SIMULATOR=\"Release-iphonesimulator\"\nBUILD_DIR_DEVICE=\"Release-iphoneos\"\n\nLIB_NAME=\"CardIO\"\nLIB_BINARY_NAME=\"lib$LIB_NAME.a\"\nLIB_BINARY_NAME_SIMULATOR=\"lib$LIB_NAME-simulator.a\"\nLIB_BINARY_NAME_DEVICE=\"lib$LIB_NAME-device.a\"\n\nSWIFTMODULE_DIR=$LIB_NAME\".swiftmodule\"\n\n# 2: BUILD\n#\n# Build for simulator\nxcodebuild -target $LIB_NAME -configuration ${CONFIGURATION} -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# Build for device\nxcodebuild -target $LIB_NAME ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# 3: OPERATE THE BINARIES\n#\n# Move to the build directory\ncd $BUILD_DIR\n\n# Completely delete the result of the previous build if any\n# Suppress the error to avoid unnecessary logs\nrm -rf $BUILD_DIR/$RESULT_DIR 2> /dev/null\n\n# Create a new result directory\nmkdir $RESULT_DIR\n\n# Copy simulator's binary file to the result dir and rename it\ncp ./$BUILD_DIR_SIMULATOR/$LIB_BINARY_NAME ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR\n\n# Copy devices's binary file to the result dir and rename it\ncp ./$BUILD_DIR_DEVICE/$LIB_BINARY_NAME ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE\n\n# Make the library \"fat\", means \"universal\"\nlipo -create ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE -output ./$RESULT_DIR/$LIB_BINARY_NAME\n\n# Delete simulator's binary file\nrm ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR\n\n# Delete device's binary file\nrm ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE\n\n# 4: OPERATE SIWFTMODULE\n#\n# Create \".siwftmodule\" directory in the result directory\nmkdir $RESULT_DIR/$SWIFTMODULE_DIR\n\n# Copy 'swiftmodule' related to simulator\ncp -r $BUILD_DIR_SIMULATOR/$SWIFTMODULE_DIR $RESULT_DIR\n\n# Copy 'swiftmodule' related to mobile divice\ncp -r $BUILD_DIR_DEVICE/$SWIFTMODULE_DIR/* $RESULT_DIR/$SWIFTMODULE_DIR\n\n# Delete build directory\nrm -rf $PROJECT_DIR/build\n";
+			shellScript = "\n# Created by: Rostyslav Druzhchenko\n#\n\n# 1: Declare variables\nRESULT_DIR=\"libUniversal\"\n\nBUILD_DIR_SIMULATOR=\"Debug-iphonesimulator\"\nBUILD_DIR_DEVICE=\"Debug-iphoneos\"\n\nLIB_NAME=\"MyLibrary\"\nLIB_BINARY_NAME=\"lib$LIB_NAME.a\"\nLIB_BINARY_NAME_SIMULATOR=\"lib$LIB_NAME-simulator.a\"\nLIB_BINARY_NAME_DEVICE=\"lib$LIB_NAME-device.a\"\n\nSWIFTMODULE_DIR=$LIB_NAME\".swiftmodule\"\n\n# 2: BUILD\n#\n# Build for simulator\nxcodebuild -target $LIB_NAME -configuration ${CONFIGURATION} -sdk iphonesimulator -arch x86_64 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# Build for device\nxcodebuild -target $LIB_NAME ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# 3: OPERATE THE BINARIES\n#\n# Move to the build directory\ncd $BUILD_DIR\n\n# Completely delete the result of the previous build if any\n# Suppress the error to avoid unnecessary logs\nrm -rf $BUILD_DIR/$RESULT_DIR 2> /dev/null\n\n# Create a new result directory\nmkdir $RESULT_DIR\n\n# Copy simulator's binary file to the result dir and rename it\ncp ./$BUILD_DIR_SIMULATOR/$LIB_BINARY_NAME ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR\n\n# Copy devices's binary file to the result dir and rename it\ncp ./$BUILD_DIR_DEVICE/$LIB_BINARY_NAME ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE\n\n# Make the library \"fat\", means \"universal\"\nlipo -create ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE -output ./$RESULT_DIR/$LIB_BINARY_NAME\n\n# Delete simulator's binary file\nrm ./$RESULT_DIR/$LIB_BINARY_NAME_SIMULATOR\n\n# Delete device's binary file\nrm ./$RESULT_DIR/$LIB_BINARY_NAME_DEVICE\n\n# 4: OPERATE SIWFTMODULE\n#\n# Create \".siwftmodule\" directory in the result directory\nmkdir $RESULT_DIR/$SWIFTMODULE_DIR\n\n# Copy 'swiftmodule' related to simulator\ncp -r $BUILD_DIR_SIMULATOR/$SWIFTMODULE_DIR $RESULT_DIR\n\n# Copy 'swiftmodule' related to mobile divice\ncp -r $BUILD_DIR_DEVICE/$SWIFTMODULE_DIR/* $RESULT_DIR/$SWIFTMODULE_DIR\n\n# Delete build directory\nrm -rf $PROJECT_DIR/build\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -344,7 +346,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyLibrary/MyLibrary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -369,7 +371,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyLibrary/MyLibrary-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -394,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4C411282684C2FC003CA864 /* Build configuration list for PBXProject "CardIO" */ = {
+		D4C411282684C2FC003CA864 /* Build configuration list for PBXProject "MyLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C411322684C2FC003CA864 /* Debug */,
@@ -403,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C411342684C2FC003CA864 /* Build configuration list for PBXNativeTarget "CardIO" */ = {
+		D4C411342684C2FC003CA864 /* Build configuration list for PBXNativeTarget "MyLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C411352684C2FC003CA864 /* Debug */,
